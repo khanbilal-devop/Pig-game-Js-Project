@@ -28,6 +28,8 @@ main{
     height: 60rem;
     border-radius: 9px;
     display: flex;
+    position: relative;
+
 }
 
 .player{
@@ -36,6 +38,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .name{
@@ -50,7 +53,6 @@ main{
 .score{
     font-size: 8rem;
     color: #c7365f;
-    margin-bottom: auto;
 }
 
 .player-active {
@@ -85,6 +87,81 @@ main{
     color: #ddd;
   }
   
-  .current-score {
+.current-score {
     font-size: 3.5rem;
   }
+
+.btn{
+    position: absolute;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: translateX(-50%);
+    border: none;
+    font-family: inherit;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding: 0.7rem 2.5rem;
+    border-radius: 50rem;
+    color: #444;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+.btn-new{
+    top: 4rem;
+}
+
+.btn-roll {
+    top: 39.3rem;
+  }
+.btn-hold {
+    top: 46.1rem;
+}
+
+.btn::first-letter {
+    font-size: 2.4rem;
+    margin-right: 0.7rem;
+}
+
+.btn:active {
+    transform: translate(-50%, 3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+
+.dice {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10rem;
+    top: 18rem;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.player-winner {
+   background-color:  #2f2f2f;
+}
+
+.winner-name{
+    color: #c7365f;
+}
+
+
+.winner{
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #c7365f;
+}
+
+.winner::after{
+    content: "🥳";
+    font-size: 3rem;
+}
